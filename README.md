@@ -23,13 +23,13 @@ class AppController
 	$message = 'Error, total error!';
 	$code = 5;
 
-	return new JsendResponse(JSendResponse::STATUS_SUCCESS, $data, NULL, NULL);
+	return new JsendResponse(JSendResponse::STATUS_SUCCESS, $data);
 #or
-	return new JsendResponse(JSendResponse::STATUS_FAIL, $data, NULL, NULL);
+	return new JsendResponse(JSendResponse::STATUS_FAIL, $data);
 #or 
 	return new JsendResponse(JSendResponse::STATUS_ERROR, NULL, $message, $code);
 #or
-	return new JsendResponse(JSendResponse::STATUS_ERROR, NULL, $message, $code);
+	return new JsendResponse(JSendResponse::STATUS_ERROR, $data, $message, $code);
 #or
 	return new JsendSuccessResponse($data);
 #or
