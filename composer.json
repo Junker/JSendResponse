@@ -1,0 +1,17 @@
+{
+    "name": "junker/symfony-jsend-response",
+    "description": "JSendResponse Component for HttpFoundation based frameworks (Symfony, Silex, Drupal etc.)",
+    "keywords": ["symfony","jsend","response","silex"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Kosenkov",
+            "email": "dk-junker@ya.ru"
+        }
+    ],
+    "autoload": {
+        "psr-0" : {
+            "Junker" : "src/"
+        }
+    }
+}
