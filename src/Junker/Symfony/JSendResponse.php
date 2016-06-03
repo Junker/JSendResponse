@@ -1,6 +1,6 @@
 <?php
 
-namespace KZP;
+namespace Junker\Symfony;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 

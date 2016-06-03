@@ -1,8 +1,8 @@
 <?php
 
-namespace KZP;
+namespace Junker\Symfony;
 
-use KZP\JSendResponse;
+use Junker\Symfony\JSendResponse;
 
 class JSendFailResponse extends JsendResponse
 {
