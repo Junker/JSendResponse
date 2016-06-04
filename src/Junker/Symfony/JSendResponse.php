@@ -60,7 +60,7 @@ class JSendResponse extends JsonResponse
         if ($status != self::STATUS_SUCCESS && $status != self::STATUS_FAIL &&  $status != self::STATUS_ERROR)
             throw new \InvalidArgumentException('The status is not valid');
 
-        $jsend_data = json_decode($this->data);
+        $jsend_data = json_decode($this->data, true);
 
         $jsend_data['status'] = $status;
 
@@ -69,7 +69,7 @@ class JSendResponse extends JsonResponse
 
     public function setJSendData($data = null)
     {
-       $jsend_data = json_decode($this->data);
+       $jsend_data = json_decode($this->data, true);
 
        $jsend_data['data'] = $data;
 
@@ -81,7 +81,7 @@ class JSendResponse extends JsonResponse
         if (!is_string($message))
             throw new \InvalidArgumentException('The message is not valid');
 
-        $jsend_data = json_decode($this->data);
+        $jsend_data = json_decode($this->data, true);
 
         $jsend_data['message'] = $message;
 
@@ -93,7 +93,7 @@ class JSendResponse extends JsonResponse
         if (!is_int($code))
             throw new \InvalidArgumentException('The message is not valid');
 
-        $jsend_data = json_decode($this->data);
+        $jsend_data = json_decode($this->data, true);
 
         $jsend_data['code'] = $code;
 
