@@ -24,19 +24,19 @@ class AppController
 	$code = 5;
 
 	return new JsendResponse(JSendResponse::STATUS_SUCCESS, $data);
-#or
+	#or
 	return new JsendResponse(JSendResponse::STATUS_FAIL, $data);
-#or 
-	return new JsendResponse(JSendResponse::STATUS_ERROR, NULL, $message, $code);
-#or
+	#or 
+	return new JsendResponse(JSendResponse::STATUS_ERROR, NULL, $message);
+	#or
 	return new JsendResponse(JSendResponse::STATUS_ERROR, $data, $message, $code);
-#or
+	#or
 	return new JsendSuccessResponse($data);
-#or
+	#or
 	return new JsendFailResponse($data);
-#or
+	#or
 	return new JsendErrorResponse($message);
-#or
+	#or
 	return new JsendErrorResponse($message, $code, $data);
 
 }

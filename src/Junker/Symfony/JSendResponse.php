@@ -21,18 +21,15 @@ class JSendResponse extends JsonResponse
         $jsend_data['status'] = $status;
 
 
-        if ($data)
+        if ($data !== null)
         {
-            if (!is_array($data))
-                throw new \InvalidArgumentException('The data is not valid, array required');
-
-            $jsend_data['data'] = $data ?: [];
+            $jsend_data['data'] = $data;
         }
 
         if ($status == self::STATUS_SUCCESS || $status == self::STATUS_FAIL)
         {
-            if (!$data)
-                throw new \InvalidArgumentException('The data is required');
+            if (!isset($jsend_data['data']))
+                $jsend_data['data'] = null;
 
         }
         elseif ($status == self::STATUS_ERROR)
@@ -58,7 +55,19 @@ class JSendResponse extends JsonResponse
         parent::__construct($jsend_data, $http_status, $headers);
     }
 
-    public function setJSendData($data = [])
+    public function setStatus($status)
+    {
+        if ($status != self::STATUS_SUCCESS && $status != self::STATUS_FAIL &&  $status != self::STATUS_ERROR)
+            throw new \InvalidArgumentException('The status is not valid');
+
+        $jsend_data = json_decode($this->data);
+
+        $jsend_data['status'] = $status;
+
+        $this->setData($jsend_data); 
+    }
+
+    public function setJSendData($data = null)
     {
        $jsend_data = json_decode($this->data);
 
