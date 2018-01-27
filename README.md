@@ -1,7 +1,7 @@
 # JSendResponse
 JSendResponse Component for HttpFoundation based frameworks (Symfony, Silex, Drupal etc.)
 
-##Installation
+## Installation
 The best way to install JSendResponse is to use a [Composer](https://getcomposer.org/download):
 
     php composer.phar require junker/symfony-jsend-response
