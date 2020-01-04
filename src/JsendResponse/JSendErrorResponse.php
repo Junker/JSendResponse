@@ -2,6 +2,13 @@
 
 namespace Junker\JsendResponse;
 
+/**
+ * Class JSendErrorResponse
+ *
+ * JSendErrorResponse represents an HTTP response in JSON format that follows the JSend specification where the status is "error".
+ *
+ * @package Junker\JsendResponse
+ */
 class JSendErrorResponse extends JsendResponse
 {
     /**

@@ -5,7 +5,7 @@ namespace Junker\JsendResponse;
 /**
  * Class JSendFailResponse
  *
- * JSendFailResponse represents an HTTP response in JSON format.
+ * JSendFailResponse represents an HTTP response in JSON format that follows the JSend specification where the status is "fail".
  *
  * @package Junker\Symfony
  */

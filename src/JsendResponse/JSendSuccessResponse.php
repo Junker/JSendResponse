@@ -2,6 +2,13 @@
 
 namespace Junker\JsendResponse;
 
+/**
+ * Class JSendSuccessResponse
+ *
+ * JSendSuccessResponse represents an HTTP response in JSON format that follows the JSend specification where the status is "success".
+ *
+ * @package Junker\JsendResponse
+ */
 class JSendSuccessResponse extends JsendResponse
 {
     /**

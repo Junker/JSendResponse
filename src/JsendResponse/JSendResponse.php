@@ -6,6 +6,13 @@ use ArrayObject;
 use Junker\JsendResponse\Exceptions\JSendSpecificationViolation;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+/**
+ * Class JSendResponse
+ *
+ * JSendResponse represents an HTTP response in JSON format that follows the JSend specification.
+ *
+ * @package Junker\JsendResponse
+ */
 class JSendResponse extends JsonResponse
 {
     /**
