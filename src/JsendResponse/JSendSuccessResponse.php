@@ -12,7 +12,7 @@ class JSendSuccessResponse extends JsendResponse
      * @param array $headers
      * @throws Exceptions\JSendSpecificationViolation
      */
-    public function __construct($data = null, $httpStatus = 200, $headers = [])
+    public function __construct($data = null, int $httpStatus = 200, array $headers = [])
     {
         parent::__construct(self::STATUS_SUCCESS, $data, null, null, $httpStatus, $headers);
     }
