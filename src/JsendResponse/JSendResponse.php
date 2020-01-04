@@ -144,7 +144,7 @@ class JSendResponse extends JsonResponse
         $jsend = json_decode($this->data, true);
 
         // ensures that the status is "error"
-        if ($jsend['status'] !== self::STATUS_ERROR) {
+        if (isset($jsend['status']) && $jsend['status'] !== self::STATUS_ERROR) {
             throw new JSendSpecificationViolation('The "message" key is not allowed for responses with a status other than "error"');
         }
 
@@ -167,7 +167,7 @@ class JSendResponse extends JsonResponse
         $jsend = json_decode($this->data, true);
 
         // ensures that the status is "error"
-        if ($jsend['status'] !== self::STATUS_ERROR) {
+        if (isset($jsend['status']) && $jsend['status'] !== self::STATUS_ERROR) {
             throw new JSendSpecificationViolation('The "code" key is not allowed for responses with a status other than "error"');
         }
 
