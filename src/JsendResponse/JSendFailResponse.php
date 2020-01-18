@@ -9,7 +9,7 @@ namespace Junker\JsendResponse;
  *
  * @package Junker\Symfony
  */
-class JSendFailResponse extends JsendResponse
+class JSendFailResponse extends JSendResponse
 {
     /**
      * JSendFailResponse constructor.

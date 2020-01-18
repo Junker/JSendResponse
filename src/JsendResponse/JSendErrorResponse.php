@@ -9,7 +9,7 @@ namespace Junker\JsendResponse;
  *
  * @package Junker\JsendResponse
  */
-class JSendErrorResponse extends JsendResponse
+class JSendErrorResponse extends JSendResponse
 {
     /**
      * JSendErrorResponse constructor.
