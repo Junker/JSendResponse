@@ -16,7 +16,7 @@ class JSendErrorResponse extends JSendResponse
      *
      * @param string $message
      * @param int|null $code
-     * @param null $data
+     * @param mixed $data
      * @param int $httpStatus
      * @param array $headers
      * @throws Exceptions\JSendSpecificationViolation

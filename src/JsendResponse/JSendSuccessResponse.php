@@ -14,7 +14,7 @@ class JSendSuccessResponse extends JSendResponse
     /**
      * JSendSuccessResponse constructor.
      *
-     * @param null $data
+     * @param mixed $data
      * @param int $httpStatus
      * @param array $headers
      * @throws Exceptions\JSendSpecificationViolation

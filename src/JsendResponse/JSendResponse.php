@@ -34,7 +34,7 @@ class JSendResponse extends JsonResponse
      * JSendResponse constructor.
      *
      * @param string $status
-     * @param null $data
+     * @param mixed $data
      * @param string|null $message
      * @param int|null $code
      * @param int $httpStatus
