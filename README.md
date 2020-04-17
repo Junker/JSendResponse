@@ -9,10 +9,10 @@ The best way to install JSendResponse is to use a [Composer](https://getcomposer
 ## Examples
 
 ```php
-use Junker\Symfony\JSendResponse;
-use Junker\Symfony\JSendSuccessResponse;
-use Junker\Symfony\JSendFailResponse;
-use Junker\Symfony\JSendErrorResponse;
+use Junker\JsendResponse\JSendResponse;
+use Junker\JsendResponse\JSendSuccessResponse;
+use Junker\JsendResponse\JSendFailResponse;
+use Junker\JsendResponse\JSendErrorResponse;
 
 
 class AppController
