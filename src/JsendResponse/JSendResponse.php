@@ -52,13 +52,8 @@ class JSendResponse extends JsonResponse
 
         $jsend['status'] = $status;
 
-        // the "data" key is required for this status
-        if ($status === self::STATUS_SUCCESS) {
-            $jsend['data'] = $data;
-        }
-
-        // the "data" key is optional for these statuses so we only add it if set
-        if (isset($data) && ($status === self::STATUS_FAIL || $status === self::STATUS_ERROR)) {
+        // the "data" key is required for these statuses
+        if ($status === self::STATUS_SUCCESS || $status === self::STATUS_FAIL) {
             $jsend['data'] = $data;
         }
 
@@ -66,6 +61,11 @@ class JSendResponse extends JsonResponse
             // ensures that "message" is set for this status
             if (!$message) {
                 throw new JSendSpecificationViolation('The "message" key is required');
+            }
+
+            // the "data" key is optional for this status so we only add it if set
+            if (isset($data)) {
+                $jsend['data'] = $data;
             }
 
             $jsend['message'] = $message;
