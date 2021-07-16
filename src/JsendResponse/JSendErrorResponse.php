@@ -21,7 +21,7 @@ class JSendErrorResponse extends JSendResponse
      * @param array $headers
      * @throws Exceptions\JSendSpecificationViolation
      */
-    public function __construct(string $message, int $code = null, $data = null, int $httpStatus = 500, array $headers = [])
+    public function __construct(string $message, int $code = null, $data = null, int $httpStatus = 200, array $headers = [])
     {
         parent::__construct(self::STATUS_ERROR, $data, $message, $code, $httpStatus, $headers);
     }
